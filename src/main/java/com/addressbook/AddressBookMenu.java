@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.IOException;
 
 public class AddressBookMenu {
-    public AddressBookAnalyser openAddressBook(String fileName) throws IOException {
+    private AddressBookOperation addressBookOperation;
+
+    public AddressBookOperation openAddressBook(String fileName) throws IOException {
         File folder = new File("/home/admin1/Desktop/AddressBook");
         File[] listOfFiles = folder.listFiles();
         for (File file : listOfFiles) {
@@ -15,13 +17,17 @@ public class AddressBookMenu {
 
         if (new File("/home/admin1/Desktop/AddressBook/" + fileName + ".json")
                 .exists()) {
-
-            AddressBookAnalyser addressBookAnalyser = new AddressBookAnalyser();
-            addressBookAnalyser.read("/home/admin1/Desktop/AddressBook/" + fileName + ".json");
-            return addressBookAnalyser;
+            AddressBookOperation addressBookOperation = new AddressBookOperation();
+            addressBookOperation.read("/home/admin1/Desktop/AddressBook/" + fileName + ".json");
+            return addressBookOperation;
         }
         else{
             return null;
         }
+    }
+
+    public AddressBookOperation saveAddressBook(AddressBookOperation obj) throws IOException {
+        obj.writeIntoJSON(obj.getPersonList(),obj.getJsonPath());
+        return null;
     }
 }

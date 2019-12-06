@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T11:40:24" hostname="admin1-desktop" time="0.164">
+<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T12:48:42" hostname="admin1-desktop" time="0.143">
   <properties/>
-  <testcase name="openAddressBook_WhenProper_ReturnTrueAndShow" classname="com.addressbook.AddressBookTest" time="0.164"/>
+  <testcase name="saveAddressBook_WhenProper_ReturnTrue" classname="com.addressbook.AddressBookTest" time="0.143"/>
   <system-out><![CDATA[AddressBook.json
 build.gradle
 Maharashtra.json

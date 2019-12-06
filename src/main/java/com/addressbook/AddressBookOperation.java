@@ -10,10 +10,34 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddressBookAnalyser {
-    List<PersonModel> personList = new ArrayList<>();
-    ObjectMapper objectMapper = new ObjectMapper();
+public class AddressBookOperation {
+    private List<PersonModel> personList = new ArrayList<>();
+    private ObjectMapper objectMapper = new ObjectMapper();
     private String jsonPath;
+
+    public List<PersonModel> getPersonList() {
+        return personList;
+    }
+
+    public void setPersonList(List<PersonModel> personList) {
+        this.personList = personList;
+    }
+
+    public ObjectMapper getObjectMapper() {
+        return objectMapper;
+    }
+
+    public void setObjectMapper(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+    }
+
+    public String getJsonPath() {
+        return jsonPath;
+    }
+
+    public void setJsonPath(String jsonPath) {
+        this.jsonPath = jsonPath;
+    }
 
     public boolean createFile(String jsonPath) {
         if (jsonPath.length() == 0) {
@@ -57,7 +81,8 @@ public class AddressBookAnalyser {
         personModel.setAddress(addressModel);
 
         this.personList.add(personModel);
-        this.writeIntoJSON(this.personList);
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        addressBookMenu.saveAddressBook(this);
         return true;
     }
 
@@ -70,7 +95,8 @@ public class AddressBookAnalyser {
             }
         }
         this.personList.get(index).setPhoneNumber(newMoNo);
-        this.writeIntoJSON(this.personList);
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        addressBookMenu.saveAddressBook(this);
         return true;
     }
 
@@ -83,7 +109,8 @@ public class AddressBookAnalyser {
             }
         }
         this.personList.get(index).setAddress(new AddressModel(city, state, zip));
-        this.writeIntoJSON(this.personList);
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        addressBookMenu.saveAddressBook(this);
         return true;
     }
 
@@ -96,7 +123,8 @@ public class AddressBookAnalyser {
             }
         }
         this.personList.remove(index);
-        this.writeIntoJSON(this.personList);
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        addressBookMenu.saveAddressBook(this);
         return true;
     }
 
@@ -110,7 +138,8 @@ public class AddressBookAnalyser {
                 }
             }
         }
-        this.writeIntoJSON(this.personList);
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        addressBookMenu.saveAddressBook(this);
         return true;
     }
 
@@ -124,7 +153,9 @@ public class AddressBookAnalyser {
                 }
             }
         }
-        this.writeIntoJSON(this.personList);
+
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        addressBookMenu.saveAddressBook(this);
         return true;
     }
 
@@ -139,16 +170,11 @@ public class AddressBookAnalyser {
         this.jsonPath=fileName;
     }
 
-    public static void writeIntoJSON(List<PersonModel> personList) throws IOException {
+    public void writeIntoJSON(List<PersonModel> personList,String filePath) throws IOException {
         Gson gson = new Gson();
         String json = gson.toJson(personList);
-        FileWriter fileWriter = new FileWriter("/home/admin1/Desktop/AddressBook/Maharashtra.json");
+        FileWriter fileWriter = new FileWriter(filePath);
         fileWriter.write(json);
         fileWriter.close();
     }
-
-
-
-
-
 }
