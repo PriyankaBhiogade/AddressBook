@@ -56,27 +56,87 @@ public class AddressBookAnalyser {
         personModel.setPhoneNumber(moNo);
         personModel.setAddress(addressModel);
 
-        PersonModel personAdd = new PersonModel(firstName, lastName, moNo, new AddressModel(city, state, zip));
-        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
-        });
-        list.add(personAdd);
-        this.writeIntoJSON(list);
+        this.personList.add(personModel);
+        this.writeIntoJSON(this.personList);
         return true;
     }
 
     public Boolean editPersonMobileNum(int moNO, int newMoNo) throws IOException {
         int index = -1;
-        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
-        });
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getPhoneNumber() == moNO) {
+        for (int i = 0; i < this.personList.size(); i++) {
+            if (this.personList.get(i).getPhoneNumber() == moNO) {
                 index = i;
                 break;
             }
         }
-        list.get(index).setPhoneNumber(newMoNo);
-        this.writeIntoJSON(list);
+        this.personList.get(index).setPhoneNumber(newMoNo);
+        this.writeIntoJSON(this.personList);
         return true;
+    }
+
+    public Boolean editPersonAddress(int moNO, String city, String state, int zip) throws IOException {
+        int index = -1;
+        for (int i = 0; i < this.personList.size(); i++) {
+            if (this.personList.get(i).getPhoneNumber() == moNO) {
+                index = i;
+                break;
+            }
+        }
+        this.personList.get(index).setAddress(new AddressModel(city, state, zip));
+        this.writeIntoJSON(this.personList);
+        return true;
+    }
+
+    public Boolean deletePersonDetails(int moNO) throws IOException {
+        int index = -1;
+        for (int i = 0; i < this.personList.size(); i++) {
+            if (this.personList.get(i).getPhoneNumber() == moNO) {
+                index = i;
+                break;
+            }
+        }
+        this.personList.remove(index);
+        this.writeIntoJSON(this.personList);
+        return true;
+    }
+
+    public Boolean sortByName() throws IOException {
+        for (int i = 0; i < this.personList.size() - 1; i++) {
+            for (int j = 0; j < this.personList.size() - i - 1; j++) {
+                if (this.personList.get(j).getLastName().compareTo(this.personList.get(j + 1).getLastName()) > 0) {
+                    PersonModel temp = this.personList.get(j);
+                    this.personList.set(j,this.personList.get(j + 1));
+                    this.personList.set(j + 1, temp);
+                }
+            }
+        }
+        this.writeIntoJSON(this.personList);
+        return true;
+    }
+
+    public Boolean sortZipCode() throws IOException {
+        for (int i = 0; i < this.personList.size() - 1; i++) {
+            for (int j = 0; j < this.personList.size() - i - 1; j++) {
+                if (this.personList.get(j).getAddress().getZip() > (this.personList.get(j + 1).getAddress().getZip()) ) {
+                    PersonModel temp = this.personList.get(j);
+                    this.personList.set(j,this.personList.get(j + 1));
+                    this.personList.set(j + 1, temp);
+                }
+            }
+        }
+        this.writeIntoJSON(this.personList);
+        return true;
+    }
+
+    public Boolean printAddressBook() throws IOException {
+        this.personList.forEach((record) -> System.out.println(record));
+        return true;
+    }
+
+    public void read(String fileName) throws IOException {
+         this.personList = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
+        });
+        this.jsonPath=fileName;
     }
 
     public static void writeIntoJSON(List<PersonModel> personList) throws IOException {
@@ -87,72 +147,8 @@ public class AddressBookAnalyser {
         fileWriter.close();
     }
 
-    public Boolean editPersonAddress(int moNO, String city, String state, int zip) throws IOException {
-        int index = -1;
-        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
-        });
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getPhoneNumber() == moNO) {
-                index = i;
-                break;
-            }
-        }
-        list.get(index).setAddress(new AddressModel(city, state, zip));
-        this.writeIntoJSON(list);
-        return true;
-    }
 
-    public Boolean deletePersonDetails(int moNO) throws IOException {
-        int index = -1;
-            List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
-            });
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getPhoneNumber() == moNO) {
-                index = i;
-                break;
-            }
-        }
-        list.remove(index);
-        this.writeIntoJSON(list);
-        return true;
-    }
 
-    public Boolean sortByName() throws IOException {
-        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
-        });
-        for (int i = 0; i < list.size() - 1; i++) {
-            for (int j = 0; j < list.size() - i - 1; j++) {
-                if (list.get(j).getLastName().compareTo(list.get(j + 1).getLastName()) > 0) {
-                    PersonModel temp = list.get(j);
-                    list.set(j,list.get(j + 1));
-                    list.set(j + 1, temp);
-                }
-            }
-        }
-        this.writeIntoJSON(list);
-        return true;
-    }
 
-    public Boolean sortZipCode() throws IOException {
-        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
-        });
-        for (int i = 0; i < list.size() - 1; i++) {
-            for (int j = 0; j < list.size() - i - 1; j++) {
-                if (list.get(j).getAddress().getZip() > (list.get(j + 1).getAddress().getZip()) ) {
-                    PersonModel temp = list.get(j);
-                    list.set(j,list.get(j + 1));
-                    list.set(j + 1, temp);
-                }
-            }
-        }
-        this.writeIntoJSON(list);
-        return true;
-    }
 
-    public Boolean printAddressBook() throws IOException {
-        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
-        });
-        list.forEach((record) -> System.out.println(record));
-        return true;
-    }
 }

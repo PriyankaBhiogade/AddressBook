@@ -31,15 +31,17 @@ public class AddressBookTest {
     //Add person details
     @Test
     public void givenPersonInfo_WhenProper_ShouldReturnTrueAndWriteIntoFile() throws IOException {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
-        Boolean result = addressBook.addPersonData("Mr ram1","giri",1452361452,"lakhani","MH",441804);
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
+        Boolean result = addressBook.addPersonData("Mr ram1123","giri",1452361452,"lakhani","MH",441804);
         Assert.assertTrue(result);
 
     }
 
     @Test
     public void givenPersonInfo_WhenFiledEmpty_ShouldReturnFalse() throws IOException {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
         Boolean result = addressBook.addPersonData("","",0,"" ,"",0);
         Assert.assertFalse(result);
     }
@@ -48,9 +50,10 @@ public class AddressBookTest {
     //EditMobileNum
     @Test
     public void givenFiledForEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon() {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
         try {
-            Boolean result = addressBook.editPersonMobileNum(1234567890,12456);
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
+            Boolean result = addressBook.editPersonMobileNum(741236,1425369874);
             Assert.assertTrue(result);
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,8 +62,9 @@ public class AddressBookTest {
 
     @Test
     public void givenFiledForEdit_WhenImProper_ReturnTrue() {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
         try {
+            AddressBookMenu addressBookMenu = new AddressBookMenu();
+            AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
             Boolean result = addressBook.editPersonMobileNum(123456,12456);
             Assert.assertFalse(result);
         } catch (IOException e) {
@@ -71,11 +75,11 @@ public class AddressBookTest {
     //EditAddress
     @Test
     public void givenFiledForAddressEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon() {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
-
         try {
-            Boolean result = addressBook.editPersonAddress(12456,"nag", "MH",145236);
-            Assert.assertFalse(result);
+            AddressBookMenu addressBookMenu = new AddressBookMenu();
+            AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
+            Boolean result = addressBook.editPersonAddress(12456,"naaaag", "MH",145236);
+            Assert.assertTrue(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -83,8 +87,9 @@ public class AddressBookTest {
 
     @Test
     public void givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon() {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
         try {
+            AddressBookMenu addressBookMenu = new AddressBookMenu();
+            AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
             Boolean result = addressBook.editPersonAddress(1245,"nag", "MH",145236);
             Assert.assertFalse(result);
         } catch (IOException e) {
@@ -96,14 +101,16 @@ public class AddressBookTest {
     //DeletePerson
     @Test
     public void givenMoNum_WhenProper_ReturnTrueAndDeleteFromJSon() throws IOException {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
-        Boolean result = addressBook.deletePersonDetails(145278);
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
+        Boolean result = addressBook.deletePersonDetails(12456);
         Assert.assertTrue(result);
     }
 
     @Test
     public void givenMoNum_WhenImProper_ReturnFalse() throws IOException {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
         Boolean result = addressBook.deletePersonDetails(145236);
         Assert.assertFalse(result);
     }
@@ -111,7 +118,8 @@ public class AddressBookTest {
     //SortByLastName
     @Test
     public void sortByLastName_WhenProper_ReturnTrueAndSortByName() throws IOException {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
         Boolean result = addressBook.sortByName();
         Assert.assertTrue(result);
     }
@@ -119,7 +127,8 @@ public class AddressBookTest {
     //SortByZip
     @Test
     public void sortByZipCode_WhenProper_ReturnTrueAndSortByName() throws IOException {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
         Boolean result = addressBook.sortZipCode();
         Assert.assertTrue(result);
     }
@@ -127,10 +136,28 @@ public class AddressBookTest {
     //PrintAddressBook
     @Test
     public void printAddressBook_WhenProper_ReturnTrueAndSortByName() throws IOException {
-        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser addressBook = addressBookMenu.openAddressBook("Maharashtra");
         Boolean result = addressBook.printAddressBook();
         Assert.assertTrue(result);
     }
+
+    //OpenAddressBook
+    @Test
+    public void openAddressBook_WhenProper_ReturnTrueAndShow() throws IOException {
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser result = addressBookMenu.openAddressBook("Maharashtra");
+        Assert.assertTrue(result instanceof AddressBookAnalyser);
+
+    }
+
+    @Test
+    public void openAddressBook_WhenImProperFileName_ReturnFalse() throws IOException {
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        AddressBookAnalyser result = addressBookMenu.openAddressBook("maha");
+        Assert.assertEquals(null,result);
+    }
+
 }
 
 

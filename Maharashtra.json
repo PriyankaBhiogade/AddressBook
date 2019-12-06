@@ -1,1 +1,62 @@
-[{"firstName":"ram1","lastName":"giri","phoneNumber":741236,"address":{"city":"lakhani","state":"MH","zip":457}},{"firstName":"ram3","lastName":"giri","phoneNumber":177854545,"address":{"city":"lakhani","state":"MH","zip":457}},{"firstName":"piyu","lastName":"bhiogade","phoneNumber":12456,"address":{"city":"nag","state":"MH","zip":145236}},{"firstName":"aaaaaa","lastName":"giri","phoneNumber":1452361452,"address":{"city":"lakhani","state":"MH","zip":441804}},{"firstName":"mrram1","lastName":"giri","phoneNumber":1452361452,"address":{"city":"lakhani","state":"MH","zip":441804145}}]
+[
+  {
+    "firstName": "ram3",
+    "lastName": "giri",
+    "phoneNumber": 177854545,
+    "address": {
+      "city": "lakhani",
+      "state": "MH",
+      "zip": 457
+    }
+  },
+  {
+    "firstName": "ram1",
+    "lastName": "giri",
+    "phoneNumber": 1425369874,
+    "address": {
+      "city": "na12g",
+      "state": "MH",
+      "zip": 145236
+    }
+  },
+  {
+    "firstName": "aaaaaa",
+    "lastName": "giri",
+    "phoneNumber": 1452361452,
+    "address": {
+      "city": "lakhani",
+      "state": "MH",
+      "zip": 441804
+    }
+  },
+  {
+    "firstName": "Mr ram1123",
+    "lastName": "giri",
+    "phoneNumber": 1452361452,
+    "address": {
+      "city": "lakhani",
+      "state": "MH",
+      "zip": 441804
+    }
+  },
+  {
+    "firstName": "Mr ram1123",
+    "lastName": "giri",
+    "phoneNumber": 1452361452,
+    "address": {
+      "city": "lakhani",
+      "state": "MH",
+      "zip": 441804
+    }
+  },
+  {
+    "firstName": "mrram1",
+    "lastName": "giri",
+    "phoneNumber": 1452361452,
+    "address": {
+      "city": "lakhani",
+      "state": "MH",
+      "zip": 441804145
+    }
+  }
+]

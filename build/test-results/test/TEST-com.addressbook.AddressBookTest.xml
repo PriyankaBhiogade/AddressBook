@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T10:16:50" hostname="admin1-desktop" time="0.273">
+<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T11:40:24" hostname="admin1-desktop" time="0.164">
   <properties/>
-  <testcase name="printAddressBook_WhenProper_ReturnTrueAndSortByName" classname="com.addressbook.AddressBookTest" time="0.273"/>
-  <system-out><![CDATA[PersonModel{firstName='ram1', lastName='giri', phoneNumber=741236, address=AddressModel{city='lakhani', state='MH', zip=457}}
-PersonModel{firstName='ram3', lastName='giri', phoneNumber=177854545, address=AddressModel{city='lakhani', state='MH', zip=457}}
-PersonModel{firstName='piyu', lastName='bhiogade', phoneNumber=12456, address=AddressModel{city='nag', state='MH', zip=145236}}
-PersonModel{firstName='aaaaaa', lastName='giri', phoneNumber=1452361452, address=AddressModel{city='lakhani', state='MH', zip=441804}}
-PersonModel{firstName='mrram1', lastName='giri', phoneNumber=1452361452, address=AddressModel{city='lakhani', state='MH', zip=441804145}}
+  <testcase name="openAddressBook_WhenProper_ReturnTrueAndShow" classname="com.addressbook.AddressBookTest" time="0.164"/>
+  <system-out><![CDATA[AddressBook.json
+build.gradle
+Maharashtra.json
+settings.gradle
+gradlew
+MH.json
+gradlew.bat
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

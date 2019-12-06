@@ -1,5 +1,7 @@
-~PersonModel{firstName='ram1', lastName='giri', phoneNumber=741236, address=AddressModel{city='lakhani', state='MH', zip=457}}
-ÅPersonModel{firstName='ram3', lastName='giri', phoneNumber=177854545, address=AddressModel{city='lakhani', state='MH', zip=457}}
-ÄPersonModel{firstName='piyu', lastName='bhiogade', phoneNumber=12456, address=AddressModel{city='nag', state='MH', zip=145236}}
-áPersonModel{firstName='aaaaaa', lastName='giri', phoneNumber=1452361452, address=AddressModel{city='lakhani', state='MH', zip=441804}}
-äPersonModel{firstName='mrram1', lastName='giri', phoneNumber=1452361452, address=AddressModel{city='lakhani', state='MH', zip=441804145}}
+AddressBook.json
+build.gradle
+Maharashtra.json
+settings.gradle
+gradlew
+MH.json
+gradlew.bat
