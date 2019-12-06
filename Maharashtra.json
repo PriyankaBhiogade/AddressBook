@@ -10,9 +10,29 @@
     }
   },
   {
-    "firstName": "ram",
+    "firstName": "ram1",
     "lastName": "giri",
-    "phoneNumber": 1781452,
+    "phoneNumber": 741236,
+    "address": {
+      "city": "lakhani",
+      "state": "MH",
+      "zip": 457
+    }
+  },
+  {
+    "firstName": "ram3",
+    "lastName": "giri",
+    "phoneNumber": 177854545,
+    "address": {
+      "city": "lakhani",
+      "state": "MH",
+      "zip": 457
+    }
+  },
+  {
+    "firstName": "Mr ram1",
+    "lastName": "giri",
+    "phoneNumber": 1452361452,
     "address": {
       "city": "lakhani",
       "state": "MH",

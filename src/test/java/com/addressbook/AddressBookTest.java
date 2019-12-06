@@ -32,7 +32,7 @@ public class AddressBookTest {
     @Test
     public void givenPersonInfo_WhenProper_ShouldReturnTrueAndWriteIntoFile() throws IOException {
         AddressBookAnalyser addressBook = new AddressBookAnalyser();
-        Boolean result = addressBook.addPersonData("ram","giri",1234567890,"lakhani","MH",441804);
+        Boolean result = addressBook.addPersonData("Mr ram1","giri",1452361452,"lakhani","MH",441804);
         Assert.assertTrue(result);
 
     }
@@ -90,6 +90,23 @@ public class AddressBookTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        Assert.assertFalse(result);
+    }
+
+    //DeletePerson
+    @Test
+    public void givenName_WhenProper_ReturnTrueAndDeleteFromJSon() throws IOException {
+        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        Boolean result = null;
+        result = addressBook.deletePersonDetails(145278);
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenName_WhenImProper_ReturnFalse() throws IOException {
+        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        Boolean result = null;
+        result = addressBook.deletePersonDetails(145236);
         Assert.assertFalse(result);
     }
 }

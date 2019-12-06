@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-12-06T08:44:28" hostname="admin1-desktop" time="0.122">
+<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-12-06T09:02:52" hostname="admin1-desktop" time="0.129">
   <properties/>
-  <testcase name="givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon" classname="com.addressbook.AddressBookTest" time="0.122">
-    <failure message="java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 2" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 2
+  <testcase name="givenName_WhenProper_ReturnTrueAndDeleteFromJSon" classname="com.addressbook.AddressBookTest" time="0.129">
+    <failure message="java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 4" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 4
 	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
 	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
 	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
 	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at com.addressbook.AddressBookAnalyser.editPersonAddress(AddressBookAnalyser.java:100)
-	at com.addressbook.AddressBookTest.givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon(AddressBookTest.java:89)
+	at java.base/java.util.ArrayList.remove(ArrayList.java:535)
+	at com.addressbook.AddressBookAnalyser.deletePersonDetails(AddressBookAnalyser.java:120)
+	at com.addressbook.AddressBookTest.givenName_WhenProper_ReturnTrueAndDeleteFromJSon(AddressBookTest.java:101)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

@@ -1,11 +1,9 @@
 package com.addressbook;
 
-import sun.jvm.hotspot.debugger.Address;
-
 public class PersonModel {
     private String firstName;
     private String lastName;
-    private int phoneNumber;
+    private long phoneNumber;
     private AddressModel address;
 
     public PersonModel() {
@@ -19,7 +17,7 @@ public class PersonModel {
         this.address = address;
     }
 
-    public String getFirstName() {
+    public String getFirstName(String name) {
         return firstName;
     }
 
@@ -35,11 +33,11 @@ public class PersonModel {
         this.lastName = lastName;
     }
 
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

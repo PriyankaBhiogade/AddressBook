@@ -101,4 +101,24 @@ public class AddressBookAnalyser {
         this.writeIntoJSON(list);
         return true;
     }
+
+    public Boolean deletePersonDetails(int moNO ) throws IOException {
+        int index = -1;
+        List<PersonModel> list = null;
+        try {
+            list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getPhoneNumber() == moNO) {
+                index = i;
+                break;
+            }
+        }
+        list.remove(index);
+        this.writeIntoJSON(list);
+        return true;
+    }
 }
