@@ -44,6 +44,54 @@ public class AddressBookTest {
         Assert.assertFalse(result);
     }
 
+
+    //EditMobileNum
+    @Test
+    public void givenFiledForEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon() {
+        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        try {
+            Boolean result = addressBook.editPersonMobileNum(1234567890,12456);
+            Assert.assertTrue(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenFiledForEdit_WhenImProper_ReturnTrue() {
+        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        try {
+            Boolean result = addressBook.editPersonMobileNum(123456,12456);
+            Assert.assertFalse(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //EditAddress
+    @Test
+    public void givenFiledForAddressEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon() {
+        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        Boolean result = null;
+        try {
+            result = addressBook.editPersonAddress(12456,"nag", "MH",145236);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon() {
+        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        Boolean result = null;
+        try {
+            result = addressBook.editPersonAddress(1245,"nag", "MH",145236);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Assert.assertFalse(result);
+    }
 }
 
 

@@ -14,7 +14,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Maharashtra.json" beforeDir="false" afterPath="$PROJECT_DIR$/Maharashtra.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBookAnalyser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBookAnalyser$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBookAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBookAnalyser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/addressbook/AddressBookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/addressbook/AddressBookTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.addressbook.AddressBookTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.addressbook.AddressBookTest.html" afterDir="false" />
@@ -75,13 +74,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnFalseAndWriteIntoFile">
-    <configuration name="AddressBookTest.givenFileName_WhenImProper_ShouldReturnFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AddressBookTest.givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon">
+    <configuration name="AddressBookTest.givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenFileName_WhenImProper_ShouldReturnFalse&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -96,12 +95,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressBookTest.givenFileName_WhenProper_ShouldReturnTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddressBookTest.givenFiledForAddressEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenFileName_WhenProper_ShouldReturnTrue&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenFiledForAddressEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -116,12 +115,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressBookTest.givenPersonInfo1_WhenProper_ShouldReturnTrueAndWriteIntoFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddressBookTest.givenFiledForEdit_WhenImProper_ReturnTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenPersonInfo1_WhenProper_ShouldReturnTrueAndWriteIntoFile&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenFiledForEdit_WhenImProper_ReturnTrue&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AddressBookTest.givenFiledForEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenFiledForEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -156,33 +175,13 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnTrueAndWriteIntoFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnTrueAndWriteIntoFile&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddressBookTest.givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon" />
+        <item itemvalue="Gradle.AddressBookTest.givenFiledForAddressEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon" />
+        <item itemvalue="Gradle.AddressBookTest.givenFiledForEdit_WhenImProper_ReturnTrue" />
+        <item itemvalue="Gradle.AddressBookTest.givenFiledForEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon" />
         <item itemvalue="Gradle.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnFalseAndWriteIntoFile" />
-        <item itemvalue="Gradle.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnTrueAndWriteIntoFile" />
-        <item itemvalue="Gradle.AddressBookTest.givenFileName_WhenImProper_ShouldReturnFalse" />
-        <item itemvalue="Gradle.AddressBookTest.givenFileName_WhenProper_ShouldReturnTrue" />
-        <item itemvalue="Gradle.AddressBookTest.givenPersonInfo1_WhenProper_ShouldReturnTrueAndWriteIntoFile" />
       </list>
     </recent_temporary>
   </component>

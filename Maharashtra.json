@@ -2,22 +2,21 @@
   {
     "firstName": "piyu",
     "lastName": "bhiogade",
-    "phoneNumber": 1234567890,
+    "phoneNumber": 12456,
     "address": {
-      "city": "lakhani",
+      "city": "nag",
       "state": "MH",
-      "zip": 441804
+      "zip": 145236
     }
   },
   {
     "firstName": "ram",
     "lastName": "giri",
-    "phoneNumber": 1234567890,
+    "phoneNumber": 1781452,
     "address": {
       "city": "lakhani",
       "state": "MH",
       "zip": 441804
     }
-  },
-
+  }
 ]

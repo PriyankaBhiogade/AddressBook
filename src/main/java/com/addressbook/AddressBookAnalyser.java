@@ -41,7 +41,7 @@ public class AddressBookAnalyser {
     }
 
     public Boolean addPersonData(String firstName, String lastName, int moNo, String city, String state, int zip) throws IOException {
-        if(firstName.length() == 0  && lastName.length() == 0 && city.length() == 0 && state.length() == 0 && moNo == 0 && zip == 0){
+        if (firstName.length() == 0 && lastName.length() == 0 && city.length() == 0 && state.length() == 0 && moNo == 0 && zip == 0) {
             System.out.println("Invalid Input");
             return false;
         }
@@ -57,13 +57,29 @@ public class AddressBookAnalyser {
         personModel.setAddress(addressModel);
 
         PersonModel personAdd = new PersonModel(firstName, lastName, moNo, new AddressModel(city, state, zip));
-        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>(){});
+        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
+        });
         list.add(personAdd);
         this.writeIntoJSON(list);
         return true;
     }
 
-    public static void writeIntoJSON(List<PersonModel> personList ) throws IOException {
+    public Boolean editPersonMobileNum(int moNO, int newMoNo) throws IOException {
+        int index = -1;
+        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
+        });
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getPhoneNumber() == moNO) {
+                index = i;
+                break;
+            }
+        }
+        list.get(index).setPhoneNumber(newMoNo);
+        this.writeIntoJSON(list);
+        return true;
+    }
+
+    public static void writeIntoJSON(List<PersonModel> personList) throws IOException {
         Gson gson = new Gson();
         String json = gson.toJson(personList);
         FileWriter fileWriter = new FileWriter("/home/admin1/Desktop/AddressBook/Maharashtra.json");
@@ -71,4 +87,18 @@ public class AddressBookAnalyser {
         fileWriter.close();
     }
 
+    public Boolean editPersonAddress(int moNO, String city, String state, int zip) throws IOException {
+        int index = -1;
+        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
+        });
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getPhoneNumber() == moNO) {
+                index = i;
+                break;
+            }
+        }
+        list.get(index).setAddress(new AddressModel(city, state, zip));
+        this.writeIntoJSON(list);
+        return true;
+    }
 }
