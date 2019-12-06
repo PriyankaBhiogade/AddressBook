@@ -41,6 +41,10 @@ public class AddressBookAnalyser {
     }
 
     public Boolean addPersonData(String firstName, String lastName, int moNo, String city, String state, int zip) throws IOException {
+        if(firstName.length() == 0  && lastName.length() == 0 && city.length() == 0 && state.length() == 0 && moNo == 0 && zip == 0){
+            System.out.println("Invalid Input");
+            return false;
+        }
         AddressModel addressModel = new AddressModel();
         addressModel.setCity(city);
         addressModel.setState(state);

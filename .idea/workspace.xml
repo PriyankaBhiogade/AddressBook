@@ -12,20 +12,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Maharashtra.json" beforeDir="false" afterPath="$PROJECT_DIR$/Maharashtra.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBookAnalyser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBookAnalyser$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBookAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBookAnalyser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/addressbook/AddressBookModel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/addressbook/AddressBookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/addressbook/AddressBookTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.addressbook.AddressBookTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.addressbook.AddressBookTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.addressbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.addressbook.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.addressbook.AddressBookTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.addressbook.AddressBookTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/addressbook/AddressBookAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/addressbook/AddressBookAnalyser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/addressbook/AddressBookModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/addressbook/PersonModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/addressbook/AddressModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/addressbook/AddressModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/addressbook/AddressBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/addressbook/AddressBookTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnTrueAndWriteIntoFile">
+  <component name="RunManager" selected="Gradle.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnFalseAndWriteIntoFile">
     <configuration name="AddressBookTest.givenFileName_WhenImProper_ShouldReturnFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -117,12 +116,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressBookTest.givenMessageShould_OpenAddressBook_WithJsonFileName_returnTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddressBookTest.givenPersonInfo1_WhenProper_ShouldReturnTrueAndWriteIntoFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenMessageShould_OpenAddressBook_WithJsonFileName_returnTrue&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenPersonInfo1_WhenProper_ShouldReturnTrueAndWriteIntoFile&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -137,12 +136,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressBookTest.givenPersonInfo1_WhenProper_ShouldReturnTrueAndWriteIntoFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnFalseAndWriteIntoFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenPersonInfo1_WhenProper_ShouldReturnTrueAndWriteIntoFile&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnFalseAndWriteIntoFile&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -179,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnFalseAndWriteIntoFile" />
         <item itemvalue="Gradle.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnTrueAndWriteIntoFile" />
         <item itemvalue="Gradle.AddressBookTest.givenFileName_WhenImProper_ShouldReturnFalse" />
         <item itemvalue="Gradle.AddressBookTest.givenFileName_WhenProper_ShouldReturnTrue" />
         <item itemvalue="Gradle.AddressBookTest.givenPersonInfo1_WhenProper_ShouldReturnTrueAndWriteIntoFile" />
-        <item itemvalue="Gradle.AddressBookTest.givenMessageShould_OpenAddressBook_WithJsonFileName_returnTrue" />
       </list>
     </recent_temporary>
   </component>
