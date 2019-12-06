@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T10:51:03" hostname="admin1-desktop" time="0.037">
+<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T07:14:20" hostname="admin1-desktop" time="0.144">
   <properties/>
-  <testcase name="givenUserInput_WhenProper_ReturnTrue" classname="com.addressbook.AddressBookTest" time="0.037"/>
+  <testcase name="givenPersonInfo_WhenProper_ShouldReturnTrueAndWriteIntoFile" classname="com.addressbook.AddressBookTest" time="0.144"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

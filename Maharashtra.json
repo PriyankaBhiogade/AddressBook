@@ -1,0 +1,22 @@
+[
+  {
+    "firstName": "piyu",
+    "lastName": "bhiogade",
+    "phoneNumber": 1234567890,
+    "address": {
+      "city": "lakhani",
+      "state": "MH",
+      "zip": 441804
+    }
+  },
+  {
+    "firstName": "ram",
+    "lastName": "giri",
+    "phoneNumber": 1234567890,
+    "address": {
+      "city": "lakhani",
+      "state": "MH",
+      "zip": 441804
+    }
+  }
+]
