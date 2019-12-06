@@ -123,6 +123,14 @@ public class AddressBookTest {
         Boolean result = addressBook.sortZipCode();
         Assert.assertTrue(result);
     }
+
+    //PrintAddressBook
+    @Test
+    public void printAddressBook_WhenProper_ReturnTrueAndPrint() throws IOException {
+        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        Boolean result = addressBook.printAddressBook();
+        Assert.assertTrue(result);
+    }
 }
 
 

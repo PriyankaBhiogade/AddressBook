@@ -148,4 +148,11 @@ public class AddressBookAnalyser {
         this.writeIntoJSON(list);
         return true;
     }
+
+    public Boolean printAddressBook() throws IOException {
+        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
+        });
+        list.forEach((data) -> System.out.println(data));
+        return true;
+    }
 }
