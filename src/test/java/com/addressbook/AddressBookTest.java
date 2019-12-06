@@ -179,7 +179,16 @@ public class AddressBookTest {
     public void saveAddressBook_WhenProper_ReturnTrue() throws IOException {
         AddressBookMenu addressBookMenu = new AddressBookMenu();
         AddressBookOperation object = addressBookMenu.openAddressBook("Maharashtra");
-        addressBookMenu.saveAddressBook(object);
+        AddressBookOperation result = addressBookMenu.saveAddressBook(object);
+        Assert.assertEquals(null,result);
+    }
+
+    //SaveAsAddressBook
+    @Test
+    public void saveAsAddressBook_WhenProper_ReturnTrue() throws IOException {
+        AddressBookMenu addressBookMenu = new AddressBookMenu();
+        Boolean result = addressBookMenu.saveAsAddressBook("Maharashtra","Maharashtra1");
+        Assert.assertTrue(result);
     }
 
 }

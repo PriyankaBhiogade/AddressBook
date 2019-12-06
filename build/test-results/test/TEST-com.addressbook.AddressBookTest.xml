@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T12:48:42" hostname="admin1-desktop" time="0.143">
+<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T13:23:45" hostname="admin1-desktop" time="0.001">
   <properties/>
-  <testcase name="saveAddressBook_WhenProper_ReturnTrue" classname="com.addressbook.AddressBookTest" time="0.143"/>
-  <system-out><![CDATA[AddressBook.json
-build.gradle
-Maharashtra.json
-settings.gradle
-gradlew
-MH.json
-gradlew.bat
-]]></system-out>
+  <testcase name="saveAsAddressBook_WhenProper_ReturnTrue" classname="com.addressbook.AddressBookTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

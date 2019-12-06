@@ -30,4 +30,15 @@ public class AddressBookMenu {
         obj.writeIntoJSON(obj.getPersonList(),obj.getJsonPath());
         return null;
     }
+
+    public Boolean saveAsAddressBook(String oldFileName,String newFileName) {
+        File oldFile = new File(
+                "/home/admin1/Desktop/AddressBook/" + oldFileName + ".json");
+        if (oldFile.exists()) {
+            File newFile = new File(
+                    "/home/admin1/Desktop/AddressBook/" + newFileName + ".json");
+            oldFile.renameTo(newFile);
+        }
+        return true;
+    }
 }
