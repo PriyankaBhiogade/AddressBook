@@ -132,4 +132,20 @@ public class AddressBookAnalyser {
         this.writeIntoJSON(list);
         return true;
     }
+
+    public Boolean sortZipCode() throws IOException {
+        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
+        });
+        for (int i = 0; i < list.size() - 1; i++) {
+            for (int j = 0; j < list.size() - i - 1; j++) {
+                if (list.get(j).getAddress().getZip() > (list.get(j + 1).getAddress().getZip()) ) {
+                    PersonModel temp = list.get(j);
+                    list.set(j,list.get(j + 1));
+                    list.set(j + 1, temp);
+                }
+            }
+        }
+        this.writeIntoJSON(list);
+        return true;
+    }
 }

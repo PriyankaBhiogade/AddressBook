@@ -115,6 +115,14 @@ public class AddressBookTest {
         Boolean result = addressBook.sortByName();
         Assert.assertTrue(result);
     }
+
+    //SortByZip
+    @Test
+    public void sortByZipCode_WhenProper_ReturnTrueAndSortByName() throws IOException {
+        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        Boolean result = addressBook.sortZipCode();
+        Assert.assertTrue(result);
+    }
 }
 
 

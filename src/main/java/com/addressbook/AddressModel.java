@@ -30,7 +30,7 @@ public class AddressModel {
         this.state = state;
     }
 
-    public int getZip(int zip) {
+    public int getZip() {
         return this.zip;
     }
 

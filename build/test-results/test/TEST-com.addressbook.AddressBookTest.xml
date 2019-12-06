@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T09:42:57" hostname="admin1-desktop" time="0.144">
+<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T09:52:35" hostname="admin1-desktop" time="0.147">
   <properties/>
-  <testcase name="given_whenProper_ReturnTrueAndSortByName" classname="com.addressbook.AddressBookTest" time="0.144"/>
+  <testcase name="sortByZipCode_WhenProper_ReturnTrueAndSortByName" classname="com.addressbook.AddressBookTest" time="0.147"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
