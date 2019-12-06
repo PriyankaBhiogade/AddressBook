@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T10:03:14" hostname="admin1-desktop" time="0.33">
+<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T10:16:50" hostname="admin1-desktop" time="0.273">
   <properties/>
-  <testcase name="printAddressBook_WhenProper_ReturnTrueAndPrint" classname="com.addressbook.AddressBookTest" time="0.33"/>
+  <testcase name="printAddressBook_WhenProper_ReturnTrueAndSortByName" classname="com.addressbook.AddressBookTest" time="0.273"/>
   <system-out><![CDATA[PersonModel{firstName='ram1', lastName='giri', phoneNumber=741236, address=AddressModel{city='lakhani', state='MH', zip=457}}
 PersonModel{firstName='ram3', lastName='giri', phoneNumber=177854545, address=AddressModel{city='lakhani', state='MH', zip=457}}
 PersonModel{firstName='piyu', lastName='bhiogade', phoneNumber=12456, address=AddressModel{city='nag', state='MH', zip=145236}}

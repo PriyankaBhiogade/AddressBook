@@ -126,7 +126,7 @@ public class AddressBookTest {
 
     //PrintAddressBook
     @Test
-    public void printAddressBook_WhenProper_ReturnTrueAndPrint() throws IOException {
+    public void printAddressBook_WhenProper_ReturnTrueAndSortByName() throws IOException {
         AddressBookAnalyser addressBook = new AddressBookAnalyser();
         Boolean result = addressBook.printAddressBook();
         Assert.assertTrue(result);
