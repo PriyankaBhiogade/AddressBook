@@ -1,6 +1,8 @@
 package com.addressbook;
 
-public class PersonModel {
+import java.util.Comparator;
+
+public class PersonModel  {
     private String firstName;
     private String lastName;
     private long phoneNumber;
@@ -17,7 +19,7 @@ public class PersonModel {
         this.address = address;
     }
 
-    public String getFirstName(String name) {
+    public String getFirstName() {
         return firstName;
     }
 

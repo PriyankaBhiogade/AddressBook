@@ -102,15 +102,10 @@ public class AddressBookAnalyser {
         return true;
     }
 
-    public Boolean deletePersonDetails(int moNO ) throws IOException {
+    public Boolean deletePersonDetails(int moNO) throws IOException {
         int index = -1;
-        List<PersonModel> list = null;
-        try {
-            list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
+            List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
             });
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getPhoneNumber() == moNO) {
                 index = i;
@@ -118,6 +113,22 @@ public class AddressBookAnalyser {
             }
         }
         list.remove(index);
+        this.writeIntoJSON(list);
+        return true;
+    }
+
+    public Boolean sortByName() throws IOException {
+        List<PersonModel> list = objectMapper.readValue(new File("/home/admin1/Desktop/AddressBook/Maharashtra.json"), new TypeReference<List<PersonModel>>() {
+        });
+        for (int i = 0; i < list.size() - 1; i++) {
+            for (int j = 0; j < list.size() - i - 1; j++) {
+                if (list.get(j).getLastName().compareTo(list.get(j + 1).getLastName()) > 0) {
+                    PersonModel temp = list.get(j);
+                    list.set(j,list.get(j + 1));
+                    list.set(j + 1, temp);
+                }
+            }
+        }
         this.writeIntoJSON(list);
         return true;
     }

@@ -74,33 +74,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressBookTest.givenName_WhenProper_ReturnTrueAndDeleteFromJSon">
-    <configuration name="AddressBookTest.givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AddressBookTest.given_whenProper_ReturnTrueAndSortByName">
+    <configuration name="AddressBookTest.givenFirstName_whenProper_ReturnTrueAndSortByName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="AddressBookTest.givenFiledForAddressEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenFiledForAddressEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.givenFirstName_whenProper_ReturnTrueAndSortByName&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -175,13 +155,33 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="AddressBookTest.given_whenProper_ReturnTrueAndSortByName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.addressbook.AddressBookTest.given_whenProper_ReturnTrueAndSortByName&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddressBookTest.given_whenProper_ReturnTrueAndSortByName" />
+        <item itemvalue="Gradle.AddressBookTest.givenFirstName_whenProper_ReturnTrueAndSortByName" />
         <item itemvalue="Gradle.AddressBookTest.givenName_WhenProper_ReturnTrueAndDeleteFromJSon" />
         <item itemvalue="Gradle.AddressBookTest.givenName_WhenImProper_ReturnFalse" />
         <item itemvalue="Gradle.AddressBookTest.givenPersonInfo_WhenProper_ShouldReturnTrueAndWriteIntoFile" />
-        <item itemvalue="Gradle.AddressBookTest.givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon" />
-        <item itemvalue="Gradle.AddressBookTest.givenFiledForAddressEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon" />
       </list>
     </recent_temporary>
   </component>

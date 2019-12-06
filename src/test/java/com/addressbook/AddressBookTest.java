@@ -72,42 +72,48 @@ public class AddressBookTest {
     @Test
     public void givenFiledForAddressEdit_WhenProperEdit_ReturnTrueAndSaveIntoJSon() {
         AddressBookAnalyser addressBook = new AddressBookAnalyser();
-        Boolean result = null;
+
         try {
-            result = addressBook.editPersonAddress(12456,"nag", "MH",145236);
+            Boolean result = addressBook.editPersonAddress(12456,"nag", "MH",145236);
+            Assert.assertFalse(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Assert.assertTrue(result);
     }
 
     @Test
     public void givenFiledForAddressEdit_WhenImProperEdit_ReturnFalseAndSaveIntoJSon() {
         AddressBookAnalyser addressBook = new AddressBookAnalyser();
-        Boolean result = null;
         try {
-            result = addressBook.editPersonAddress(1245,"nag", "MH",145236);
+            Boolean result = addressBook.editPersonAddress(1245,"nag", "MH",145236);
+            Assert.assertFalse(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Assert.assertFalse(result);
+
     }
 
     //DeletePerson
     @Test
-    public void givenName_WhenProper_ReturnTrueAndDeleteFromJSon() throws IOException {
+    public void givenMoNum_WhenProper_ReturnTrueAndDeleteFromJSon() throws IOException {
         AddressBookAnalyser addressBook = new AddressBookAnalyser();
-        Boolean result = null;
-        result = addressBook.deletePersonDetails(145278);
+        Boolean result = addressBook.deletePersonDetails(145278);
         Assert.assertTrue(result);
     }
 
     @Test
-    public void givenName_WhenImProper_ReturnFalse() throws IOException {
+    public void givenMoNum_WhenImProper_ReturnFalse() throws IOException {
         AddressBookAnalyser addressBook = new AddressBookAnalyser();
-        Boolean result = null;
-        result = addressBook.deletePersonDetails(145236);
+        Boolean result = addressBook.deletePersonDetails(145236);
         Assert.assertFalse(result);
+    }
+
+    //SortByLastName
+    @Test
+    public void sortByLastName_WhenProper_ReturnTrueAndSortByName() throws IOException {
+        AddressBookAnalyser addressBook = new AddressBookAnalyser();
+        Boolean result = addressBook.sortByName();
+        Assert.assertTrue(result);
     }
 }
 
