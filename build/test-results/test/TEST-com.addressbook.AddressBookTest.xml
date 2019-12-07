@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T13:23:45" hostname="admin1-desktop" time="0.001">
+<testsuite name="com.addressbook.AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-07T05:14:00" hostname="admin1-desktop" time="0.122">
   <properties/>
-  <testcase name="saveAsAddressBook_WhenProper_ReturnTrue" classname="com.addressbook.AddressBookTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="givenFileName_WhenProper_ShouldReturnTrue" classname="com.addressbook.AddressBookTest" time="0.122"/>
+  <system-out><![CDATA[Address Book Created
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

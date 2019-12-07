@@ -39,9 +39,10 @@ public class AddressBookOperation {
         this.jsonPath = jsonPath;
     }
 
-    public boolean createFile(String jsonPath) {
+    public boolean createFile(String jsonPath) throws AddressBookException, IOException {
         if (jsonPath.length() == 0) {
             System.out.println("Invalid or empty FileName");
+//            throw new AddressBookException(AddressBookException.ExceptionType.NO_SUCH_FILE, "File Not Found", ex);
             return false;
         } else {
             if (new File("/home/admin1/Desktop/AddressBook/" + jsonPath + ".json")
@@ -49,20 +50,13 @@ public class AddressBookOperation {
                 System.out.println("Address Book Already Exists");
                 return false;
             } else {
-                try {
                     objectMapper.writeValue(new File("/home/admin1/Desktop/AddressBook/" + jsonPath + ".json"), personList);
                     this.jsonPath = jsonPath;
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (NullPointerException e) {
-                    e.printStackTrace();
+                    System.out.println("Address Book Created");
+                    return true;
                 }
-                System.out.println("Address Book Created");
             }
         }
-        return true;
-    }
 
     public Boolean addPersonData(String firstName, String lastName, int moNo, String city, String state, int zip) throws IOException {
         if (firstName.length() == 0 && lastName.length() == 0 && city.length() == 0 && state.length() == 0 && moNo == 0 && zip == 0) {

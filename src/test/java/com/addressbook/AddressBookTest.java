@@ -9,20 +9,22 @@ public class AddressBookTest {
 
     //Created JSON file
     @Test
-    public void givenFileName_WhenProper_ShouldReturnTrue() {
+    public void givenFileName_WhenProper_ShouldReturnTrue() throws IOException, AddressBookException {
         AddressBookOperation addressBook = new AddressBookOperation();
-        Boolean result = addressBook.createFile("Maharashtra");
-        Assert.assertTrue(result);
-    }
+        Boolean result = null;
+            result = addressBook.createFile("Maharashtra123");
+            Assert.assertTrue(result);
+        }
+
     @Test
-    public void givenFileName_WhenProperButAllReadyExits_ShouldReturnFalse() {
+    public void givenFileName_WhenProperButAllReadyExits_ShouldReturnFalse() throws IOException, AddressBookException {
         AddressBookOperation addressBook = new AddressBookOperation();
         Boolean result = addressBook.createFile("Maharashtra");
         Assert.assertFalse(result);
     }
 
     @Test
-    public void givenFileName_WhenImProper_ShouldReturnFalse() {
+    public void givenFileName_WhenImProper_ShouldReturnFalse() throws IOException, AddressBookException {
         AddressBookOperation addressBook = new AddressBookOperation();
         Boolean result = addressBook.createFile("");
         Assert.assertFalse(result);
@@ -187,7 +189,7 @@ public class AddressBookTest {
     @Test
     public void saveAsAddressBook_WhenProper_ReturnTrue() throws IOException {
         AddressBookMenu addressBookMenu = new AddressBookMenu();
-        Boolean result = addressBookMenu.saveAsAddressBook("Maharashtra","Maharashtra1");
+        Boolean result = addressBookMenu.saveAsAddressBook("Maharashtra1","Maharashtra");
         Assert.assertTrue(result);
     }
 
